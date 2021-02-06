@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "commonJS",
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "@": ["."],
+      "@src/*": ["src/*"],
+      "@config/*": ["src/config/*"],
+      "@provider/*": ["src/providers/*"],
+      "@view/*": ["src/view/*"],
+      "@middleware/*": ["src/middleware/*"],
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

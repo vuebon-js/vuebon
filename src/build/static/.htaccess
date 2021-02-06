@@ -1,0 +1,13 @@
+Options -Indexes +Includes +FollowSymLinks +MultiViews
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule . index.html [L]
+</IfModule>
+
+<FilesMatch ".(map)$">
+    Order Allow,Deny
+    deny from all
+</FilesMatch>
