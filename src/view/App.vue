@@ -12,24 +12,15 @@
 </template>
 
 <script>
-    import {make} from "@vuebon/framework/utils/helpers"
+    import {defineAsyncComponent} from 'vue';
     export default  {
         components: {
-            VbHeader: () => import('./component/part/Header'),
+            VbHeader: defineAsyncComponent(() => import('./components/Header'))
         },
         computed: {
             errorComponentName() {
                 return `error-${this.$exception.code}`
             }
-        },
-        mounted() {
-            let exampleServiceA = make('example');
-            exampleServiceA.txt = 'at yaz';
-
-            let exampleServiceB = make('example');
-            exampleServiceB.txt = 'at yazma';
-
-            console.log(exampleServiceA.txt, exampleServiceB.txt)
         }
     }
 </script>

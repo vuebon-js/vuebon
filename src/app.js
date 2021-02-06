@@ -1,19 +1,13 @@
 import {App}             from "@vuebon/framework/core/App"
-import Vue               from "vue"
+import {createApp}       from "vue"
 import AppComponent      from "@view/App.vue"
 import providers         from "./provider";
 import config            from "./config";
 import {globals, routes} from "./middleware"
 
-App.bootstrap({
-    Vue, providers, config, middleware: {
-        globals, routes
-    }
-}).then(app => {
-    const vm = new Vue({
-        el: '#app',
-        render: h => h(AppComponent),
-        router: app?.resolve('vue-router'),
-        store: app?.resolve('vuex')
-    });
+const vm = createApp(AppComponent);
+const middleware = { globals, routes }
+
+App.bootstrap({ vm, providers, config, middleware }).then(app => {
+    vm.mount('#app')
 });

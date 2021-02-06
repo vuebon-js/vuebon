@@ -11,6 +11,7 @@
       "@provider/*": ["src/providers/*"],
       "@view/*": ["src/view/*"],
       "@middleware/*": ["src/middleware/*"],
+      "@vuebon/*": [".vuebon/*"]
     }
   },
   "exclude": [

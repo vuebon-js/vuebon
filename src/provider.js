@@ -4,9 +4,7 @@ import RouterProvider     from "@vuebon/framework/services/router/RouterProvider
 import AuthProvider       from "@vuebon/framework/services/auth/AuthProvider";
 import GateProvider       from "@vuebon/framework/services/gate/GateProvider";
 import VueRouterProvider  from "@provider/VueRouterProvider";
-import VuexProvider       from "@provider/VuexProvider";
-import ExampleProvider    from "@provider/ExampleProvider";
-
+// import VuexProvider       from "@provider/VuexProvider";
 
 export default [
     LoaderProvider,
@@ -15,6 +13,5 @@ export default [
     VueRouterProvider,
     AuthProvider,
     GateProvider,
-    VuexProvider,
-    ExampleProvider
+    // VuexProvider,
 ]

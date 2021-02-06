@@ -7,9 +7,11 @@
                 <span>|</span>
                 <span class="ml-1">{{$user.name}}</span>
             </template>
-            
-            <router-link :to="{name: 'login'}" v-else style="font-size:18px; margin-right: 15px">Giriş Yap</router-link>
-            <router-link :to="{name: 'register'}"style="font-size:18px;">Kayıt Ol</router-link>
+            <template v-else>
+                <router-link :to="{name: 'login'}" style="font-size:18px; margin-right: 15px">Giriş Yap</router-link>
+                <router-link :to="{name: 'register'}" style="font-size:18px;">Kayıt Ol</router-link>
+            </template>
+
         </nav>
     </header>
 </template>
@@ -20,7 +22,7 @@
     export default {
         computed: {
             showHeader() {
-                return this.$router.matcher.match(login).path === login;
+                return this.$router.hasRoute('login');
             }
         }
     }

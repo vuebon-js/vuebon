@@ -16,14 +16,15 @@ module.exports = {
     resolve: {
         alias: {
             axios: 'axios/lib/axios',
-            vue  : 'vue/dist/vue.esm.js',
             jquery: 'jquery/src/jquery',
             '@': path.resolve('.'),
             '@src': path.resolve('.', 'src'),
             '@config': path.resolve('.', 'src/config'),
             '@view': path.resolve('.', 'src/view'),
             '@provider': path.resolve('.', 'src/providers'),
-            '@middleware': path.resolve('.', 'src/middleware')
+            '@middleware': path.resolve('.', 'src/middleware'),
+
+            '@vuebon': path.resolve('.', '.vuebon')
         },
         extensions: ['.js', '.vue', '.scss', '.css', '.ts']
     },
