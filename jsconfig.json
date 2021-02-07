@@ -10,8 +10,7 @@
       "@config/*": ["src/config/*"],
       "@provider/*": ["src/providers/*"],
       "@view/*": ["src/view/*"],
-      "@middleware/*": ["src/middleware/*"],
-      "@vuebon/*": [".vuebon/*"]
+      "@middleware/*": ["src/middleware/*"]
     }
   },
   "exclude": [

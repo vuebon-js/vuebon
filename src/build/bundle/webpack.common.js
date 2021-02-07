@@ -22,9 +22,7 @@ module.exports = {
             '@config': path.resolve('.', 'src/config'),
             '@view': path.resolve('.', 'src/view'),
             '@provider': path.resolve('.', 'src/providers'),
-            '@middleware': path.resolve('.', 'src/middleware'),
-
-            '@vuebon': path.resolve('.', '.vuebon')
+            '@middleware': path.resolve('.', 'src/middleware')
         },
         extensions: ['.js', '.vue', '.scss', '.css', '.ts']
     },
